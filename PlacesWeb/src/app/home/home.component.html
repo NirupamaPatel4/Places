@@ -1,0 +1,18 @@
+<div class="home-page">
+  <div class="form">
+    <input id="loc" class="form-control" type="text" (setAddress)="updateLocationValue($event)" name="editLocation" googleplace/>
+    <button (click)="addSearch()" class="btn waves-effect waves-light" type="submit" name="action">Search</button>
+    <p class="message"><a (click)="logout()" href="/">Logout</a></p>
+  </div>
+</div>
+
+<h3 *ngIf="showSearchedlocations">Searched Locations</h3>
+<div class="row">
+  <div class="search-page col-sm-2" *ngFor="let location of locations">
+    <div class="card">
+      <p>{{location.address.locality}}, {{location.address.city}}, {{location.address.state}}, {{location.address.country}}</p>
+      <p *ngIf="location?.address?.formattedAddress">address: {{location.address.formattedAddress}}</p>
+      <p>searchedOn : {{location.searchedOn}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="login-page">
+  <div class="form" *ngIf="showRegister">
+      <input [(ngModel)]="user.name" id="name" type="text" class="validate" placeholder="name"/>
+      <input [(ngModel)]="user.emailId" id="email" type="email" class="validate" placeholder="email address"/>
+      <input [(ngModel)]="user.password" id="password" type="password" class="validate" placeholder="password"/>
+
+      <span>{{errorMessage}}</span>
+      <button (click)="login()" class="btn waves-effect waves-light" type="submit" name="action">Sign Up</button>
+      <p class="message">Already registered? <a (click)="toggle()" href="#">Sign In</a></p>
+  </div>
+  <div class="form" *ngIf="showLogin">
+      <input [(ngModel)]="user.emailId" type="email" class="validate" placeholder="email"/>
+      <input [(ngModel)]="user.password" type="password" class="validate" placeholder="password"/>
+
+      <span>{{errorMessage}}</span>
+      <button (click)="login()" class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+      <p class="message">Not registered? <a (click)="toggle()" href="#">Create an account</a></p>
+  </div>
+</div>

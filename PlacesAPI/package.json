@@ -1,0 +1,16 @@
+{
+  "name": "places-api",
+  "version": "0.0.0",
+  "description": "save and search google plces api data.",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongoose": "^4.4.13",
+    "amqp" : "*",
+    "jsonwebtoken": "latest",
+    "cors": "^2.8.3"
+  },
+  "scripts": {
+    "start": "node src/app.js"
+  }
+}

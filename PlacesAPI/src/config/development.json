@@ -1,0 +1,8 @@
+{
+  "db": {
+    "host" : "localhost:27017",
+    "user" : "",
+    "password" : "",
+    "database" : "placesdb"
+  }
+}
